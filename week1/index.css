@@ -1,0 +1,338 @@
+body{
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    max-width: 1920px;
+}
+
+/* 處理圖片自適應伸縮 */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.header{
+    display: grid; /* Change display property to grid */
+    grid-template-columns: auto 1fr; /* Define grid columns */
+    align-items: center; /* Align items vertically */
+  }
+  
+.title{
+    margin: 10px; /* Simplify margin */
+}
+
+.burger_items{
+    display: grid; /* Use grid layout for the container */
+    grid-auto-flow: column; /* Arrange items in columns */
+    justify-content: flex-end; /* Align items to the end horizontally */
+    gap: 10px; /* Add gap between items */
+}
+  
+.item{
+    margin: 10px; /* Reset margin */
+}
+
+.middle{
+    background-size: cover;
+    display: grid; /* Change display property to grid */
+    place-items: center; /* Short-hand for justify-items: center; align-items: center; */
+    font-size: 2rem;
+    text-align: center;
+    height: 250px;
+    background-color: rgb(168, 221, 243);
+}
+
+
+
+@media(max-width: 1920px) and (min-width: 1201px){
+    .pictureI{
+        max-width: 1200px;
+        grid-template-columns: repeat(3, 1fr); /* 1/3 of total width for each box */
+        gap: 20px; /* Adjust gap between boxes */
+        margin-bottom: 20px;
+
+        display: grid; /* Change display property to grid */
+        justify-content: center; /* You can keep this property */
+        margin: 0 auto;
+        margin-top: 50px;
+
+    }
+    .pIinner{
+        display: grid;
+        grid-template-columns: 80px auto; /* 50px height for image, remaining height for text */
+        height: 50px;
+    }
+    .pIinner img{
+        width: 80px; /* Set image width */
+        height: 50px; /* Set image height */
+    }
+    .backColor{
+        height: 50px;
+        background-color: rgb(168, 221, 243);
+        display: grid;
+        align-items: center; /* Vertically center text */
+        padding-left: 10px; /* Add padding for space between image and text */
+    }
+    .pictureII{
+        max-width: 1200px;
+        margin: 50px auto; /* Short-hand for margin-top and margin-bottom */
+        display: grid; /* Change display property to grid */
+        grid-template-columns: repeat(6, 1fr); /* Set six columns with equal widths */
+        gap: 20px; /* Add gap between grid items */
+        justify-items: center; /* Align items horizontally in the center */
+        margin-top: 20px;
+    }
+    .pIIinner_1_3 {
+        position: relative;
+        grid-column: span 2; /* Span one column (1/3 of max width) */
+    }
+    .pIIinner_1_2 {
+        grid-column: span 1; /* Span two columns (1/6 of max width) */
+    }
+    .pIIinner_1_2 img{
+        height: 100%;
+        object-fit: cover;
+    }
+    .overlayS {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 0;
+        opacity: 0.5;
+        padding-right: 5px;
+        padding-top: 5px;
+    }
+      
+    .overlayT {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%; /* Ensure full width */
+        height: 35px;
+        display: grid;
+        align-items: center; /* Vertically center text */
+        justify-content: center; /* Horizontally center child elements */
+        background-color: rgba(148, 255, 162, 0.7); /* Semi-transparent white background */
+        text-align: center;
+    }
+    .burger{
+        display: none;
+    }
+    .mobile-nav{
+        display: none;
+    }
+    
+}
+
+@media(max-width: 1200px) and (min-width: 601px){
+    .pictureI{
+        max-width: 90%;
+        grid-template-columns: repeat(2, 1fr); /* 1/2 of total width for each box */
+        gap: 20px; /* Adjust gap between boxes */
+        margin-bottom: 20px;
+
+        display: grid; /* Change display property to grid */
+        justify-content: center; /* You can keep this property */
+        margin: 0 auto;
+        margin-top: 50px;
+
+    }
+    #pIinner_1{
+        position: relative;
+        grid-column: span 2; /* Span one column (1 of max width) */
+    }
+    #pIinner_1_2{
+        grid-column: span 1; /* Span two columns (1/2 of max width) */
+    }
+    .pIinner{
+        display: grid;
+        grid-template-columns: 80px auto; /* 50px height for image, remaining height for text */
+        height: 50px;
+    }
+    .pIinner img{
+        width: 80px; /* Set image width */
+        height: 50px; /* Set image height */
+       /* object-fit: cover;  Ensure the image covers the entire box */
+    }
+    .backColor{
+        height: 50px;
+        background-color: rgb(168, 221, 243);
+        display: grid;
+        align-items: center; /* Vertically center text */
+        padding-left: 10px; /* Add padding for space between image and text */
+    }
+    .pictureII{
+        max-width: 90%;
+        margin: 50px auto; /* Short-hand for margin-top and margin-bottom */
+        display: grid; /* Change display property to grid */
+        grid-template-columns: repeat(4, 1fr); /* Set four columns with equal widths */
+        gap: 20px; /* Add gap between grid items */
+        justify-items: center; /* Align items horizontally in the center */
+        margin-top: 20px;
+    }
+    #pIIinner_1_2 {
+        position: relative;
+        grid-column: span 2; /* Span one column (1/2 of max width) */
+    }
+    #pIIinner_1_4 {
+        position: relative;
+        grid-column: span 1; /* Span two columns (1/4 of max width) */
+    }
+    #pIIinner_1_4 img{
+        height: 100%;
+        object-fit: cover;
+    }
+    .overlayS {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 0;
+        opacity: 0.5;
+        padding-right: 5px;
+        padding-top: 5px;
+    }
+    .overlayT {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%; /* Ensure full width */
+        height: 35px;
+        display: grid;
+        align-items: center; /* Vertically center text */
+        justify-content: center; /* Horizontally center child elements */
+        background-color: rgba(148, 255, 162, 0.7); /* Semi-transparent white background */
+        text-align: center;
+    }
+    .burger{
+        display: none;
+    }
+    .mobile-nav{
+        display: none;
+    }
+}
+
+/* and (min-width: 361px) */
+@media(max-width: 600px){
+    .pictureI{
+        max-width: 90%;
+        grid-template-columns: repeat(2, 1fr); /* 1/2 of total width for each box */
+        gap: 20px; /* Adjust gap between boxes */
+        margin-bottom: 20px;
+
+        display: grid; /* Change display property to grid */
+        justify-content: center; /* You can keep this property */
+        margin: 0 auto;
+        margin-top: 50px;
+
+    }
+    .pIinner{
+        grid-column: span 2;
+        /* width: 98%; */
+        display: grid;
+        grid-template-columns: 80px auto; /* 50px height for image, remaining height for text */
+        height: 50px;
+    }
+    .pIinner img{
+        width: 80px; /* Set image width */
+        height: 50px; /* Set image height */
+       /* object-fit: cover;  Ensure the image covers the entire box */
+    }
+    .backColor{
+        height: 50px;
+        background-color: rgb(168, 221, 243);
+        display: grid;
+        align-items: center; /* Vertically center text */
+        padding-left: 10px; /* Add padding for space between image and text */
+    }
+    .pictureII{
+        max-width: 90%;
+        margin: 50px auto; /* Short-hand for margin-top and margin-bottom */
+        display: grid; /* Change display property to grid */
+        grid-template-columns: repeat(2, 1fr); /* Set two columns with equal widths */
+        gap: 20px; /* Add gap between grid items */
+        justify-items: center; /* Align items horizontally in the center */
+        margin-top: 20px;
+    }
+    .pIIinner_1_3{
+        /* width: 98%; */
+        grid-column: span 2;
+        position: relative;
+    }
+    .overlayS {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 0;
+        opacity: 0.5;
+        padding-right: 5px;
+        padding-top: 5px;
+    }
+    .overlayT {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%; /* Ensure full width */
+        height: 35px;
+        display: grid;
+        align-items: center; /* Vertically center text */
+        justify-content: center; /* Horizontally center child elements */
+        background-color: rgba(148, 255, 162, 0.7); /* Semi-transparent white background */
+        text-align: center;
+    }
+    .item{
+        display: none;
+    }
+    .burger{
+        display: grid; /* Use grid layout for the container */
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+    }
+    .burger:hover{
+        cursor: pointer;
+    }
+    dialog {
+        outline: none;
+
+    }
+    #pleaseShowUp {
+        position: fixed;
+        top: 0px; 
+        margin-right: 0px;
+        width: 46%;
+        height: 100%;
+        background-color: white;
+        border-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 999; /* Ensure the dialog is above other content */
+    }
+    .mobile-nav {
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        justify-content: center;
+        align-content: flex-start; /* Align items to the top */
+        height: 100%;
+    }
+    .popup-item {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        padding-top: 20px;
+    }
+    #closeImg {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+    #bgImg{
+        width: 40px;
+        height: 45px;
+        margin-right: 10px;
+        opacity: 0.4;
+    } 
+    
+}
