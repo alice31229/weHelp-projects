@@ -12,30 +12,30 @@ img{
 }
 
 .header{
-    display: grid; /* Change display property to grid */
-    grid-template-columns: auto 1fr; /* Define grid columns */
-    align-items: center; /* Align items vertically */
+    display: grid; 
+    grid-template-columns: auto 1fr; 
+    align-items: center; 
   }
   
 .title{
-    margin: 10px; /* Simplify margin */
+    margin: 10px; 
 }
 
 .burger_items{
-    display: grid; /* Use grid layout for the container */
-    grid-auto-flow: column; /* Arrange items in columns */
-    justify-content: flex-end; /* Align items to the end horizontally */
-    gap: 10px; /* Add gap between items */
+    display: grid; 
+    grid-auto-flow: column; 
+    justify-content: flex-end; 
+    gap: 10px; 
 }
   
 .item{
-    margin: 10px; /* Reset margin */
+    margin: 10px; 
 }
 
 .middle{
     background-size: cover;
-    display: grid; /* Change display property to grid */
-    place-items: center; /* Short-hand for justify-items: center; align-items: center; */
+    display: grid; 
+    place-items: center; 
     font-size: 2rem;
     text-align: center;
     height: 250px;
@@ -47,47 +47,47 @@ img{
 @media(max-width: 1920px) and (min-width: 1201px){
     .pictureI{
         max-width: 1200px;
-        grid-template-columns: repeat(3, 1fr); /* 1/3 of total width for each box */
-        gap: 20px; /* Adjust gap between boxes */
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px; 
         margin-bottom: 20px;
 
-        display: grid; /* Change display property to grid */
-        justify-content: center; /* You can keep this property */
+        display: grid; 
+        justify-content: center; 
         margin: 0 auto;
         margin-top: 50px;
 
     }
     .pIinner{
         display: grid;
-        grid-template-columns: 80px auto; /* 50px height for image, remaining height for text */
+        grid-template-columns: 80px auto; 
         height: 50px;
     }
     .pIinner img{
-        width: 80px; /* Set image width */
-        height: 50px; /* Set image height */
+        width: 80px; 
+        height: 50px; 
     }
     .backColor{
         height: 50px;
         background-color: rgb(168, 221, 243);
         display: grid;
-        align-items: center; /* Vertically center text */
-        padding-left: 10px; /* Add padding for space between image and text */
+        align-items: center;
+        padding-left: 10px; 
     }
     .pictureII{
         max-width: 1200px;
-        margin: 50px auto; /* Short-hand for margin-top and margin-bottom */
-        display: grid; /* Change display property to grid */
-        grid-template-columns: repeat(6, 1fr); /* Set six columns with equal widths */
-        gap: 20px; /* Add gap between grid items */
-        justify-items: center; /* Align items horizontally in the center */
+        margin: 50px auto; 
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); 
+        gap: 20px; 
+        justify-items: center;
         margin-top: 20px;
     }
     .pIIinner_1_3 {
         position: relative;
-        grid-column: span 2; /* Span one column (1/3 of max width) */
+        grid-column: span 2; 
     }
     .pIIinner_1_2 {
-        grid-column: span 1; /* Span two columns (1/6 of max width) */
+        grid-column: span 1; 
     }
     .pIIinner_1_2 img{
         height: 100%;
@@ -108,12 +108,12 @@ img{
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 100%; /* Ensure full width */
+        width: 100%; 
         height: 35px;
         display: grid;
-        align-items: center; /* Vertically center text */
-        justify-content: center; /* Horizontally center child elements */
-        background-color: rgba(148, 255, 162, 0.7); /* Semi-transparent white background */
+        align-items: center; 
+        justify-content: center; 
+        background-color: rgba(148, 255, 162, 0.7); 
         text-align: center;
     }
     .burger{
@@ -128,56 +128,55 @@ img{
 @media(max-width: 1200px) and (min-width: 601px){
     .pictureI{
         max-width: 90%;
-        grid-template-columns: repeat(2, 1fr); /* 1/2 of total width for each box */
-        gap: 20px; /* Adjust gap between boxes */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
         margin-bottom: 20px;
 
-        display: grid; /* Change display property to grid */
-        justify-content: center; /* You can keep this property */
+        display: grid; 
+        justify-content: center; 
         margin: 0 auto;
         margin-top: 50px;
 
     }
     #pIinner_1{
         position: relative;
-        grid-column: span 2; /* Span one column (1 of max width) */
+        grid-column: span 2; 
     }
     #pIinner_1_2{
-        grid-column: span 1; /* Span two columns (1/2 of max width) */
+        grid-column: span 1; 
     }
     .pIinner{
         display: grid;
-        grid-template-columns: 80px auto; /* 50px height for image, remaining height for text */
+        grid-template-columns: 80px auto; 
         height: 50px;
     }
     .pIinner img{
-        width: 80px; /* Set image width */
-        height: 50px; /* Set image height */
-       /* object-fit: cover;  Ensure the image covers the entire box */
+        width: 80px; 
+        height: 50px;
     }
     .backColor{
         height: 50px;
         background-color: rgb(168, 221, 243);
         display: grid;
-        align-items: center; /* Vertically center text */
-        padding-left: 10px; /* Add padding for space between image and text */
+        align-items: center; 
+        padding-left: 10px; 
     }
     .pictureII{
         max-width: 90%;
-        margin: 50px auto; /* Short-hand for margin-top and margin-bottom */
-        display: grid; /* Change display property to grid */
-        grid-template-columns: repeat(4, 1fr); /* Set four columns with equal widths */
-        gap: 20px; /* Add gap between grid items */
-        justify-items: center; /* Align items horizontally in the center */
+        margin: 50px auto; 
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 20px; 
+        justify-items: center; 
         margin-top: 20px;
     }
     #pIIinner_1_2 {
         position: relative;
-        grid-column: span 2; /* Span one column (1/2 of max width) */
+        grid-column: span 2; 
     }
     #pIIinner_1_4 {
         position: relative;
-        grid-column: span 1; /* Span two columns (1/4 of max width) */
+        grid-column: span 1; 
     }
     #pIIinner_1_4 img{
         height: 100%;
@@ -197,12 +196,12 @@ img{
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 100%; /* Ensure full width */
+        width: 100%; 
         height: 35px;
         display: grid;
-        align-items: center; /* Vertically center text */
-        justify-content: center; /* Horizontally center child elements */
-        background-color: rgba(148, 255, 162, 0.7); /* Semi-transparent white background */
+        align-items: center; 
+        justify-content: center; 
+        background-color: rgba(148, 255, 162, 0.7); 
         text-align: center;
     }
     .burger{
@@ -213,50 +212,46 @@ img{
     }
 }
 
-/* and (min-width: 361px) */
 @media(max-width: 600px){
     .pictureI{
         max-width: 90%;
-        grid-template-columns: repeat(2, 1fr); /* 1/2 of total width for each box */
-        gap: 20px; /* Adjust gap between boxes */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
         margin-bottom: 20px;
 
-        display: grid; /* Change display property to grid */
-        justify-content: center; /* You can keep this property */
+        display: grid; 
+        justify-content: center; 
         margin: 0 auto;
         margin-top: 50px;
 
     }
     .pIinner{
         grid-column: span 2;
-        /* width: 98%; */
         display: grid;
-        grid-template-columns: 80px auto; /* 50px height for image, remaining height for text */
+        grid-template-columns: 80px auto; 
         height: 50px;
     }
     .pIinner img{
-        width: 80px; /* Set image width */
-        height: 50px; /* Set image height */
-       /* object-fit: cover;  Ensure the image covers the entire box */
+        width: 80px; 
+        height: 50px; 
     }
     .backColor{
         height: 50px;
         background-color: rgb(168, 221, 243);
         display: grid;
-        align-items: center; /* Vertically center text */
-        padding-left: 10px; /* Add padding for space between image and text */
+        align-items: center; 
+        padding-left: 10px; 
     }
     .pictureII{
         max-width: 90%;
-        margin: 50px auto; /* Short-hand for margin-top and margin-bottom */
-        display: grid; /* Change display property to grid */
-        grid-template-columns: repeat(2, 1fr); /* Set two columns with equal widths */
-        gap: 20px; /* Add gap between grid items */
-        justify-items: center; /* Align items horizontally in the center */
+        margin: 50px auto; 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+        justify-items: center; 
         margin-top: 20px;
     }
     .pIIinner_1_3{
-        /* width: 98%; */
         grid-column: span 2;
         position: relative;
     }
@@ -274,21 +269,21 @@ img{
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 100%; /* Ensure full width */
+        width: 100%;
         height: 35px;
         display: grid;
-        align-items: center; /* Vertically center text */
-        justify-content: center; /* Horizontally center child elements */
-        background-color: rgba(148, 255, 162, 0.7); /* Semi-transparent white background */
+        align-items: center; 
+        justify-content: center; 
+        background-color: rgba(148, 255, 162, 0.7); 
         text-align: center;
     }
     .item{
         display: none;
     }
     .burger{
-        display: grid; /* Use grid layout for the container */
-        justify-content: center; /* Center items horizontally */
-        align-items: center; /* Center items vertically */
+        display: grid;
+        justify-content: center; 
+        align-items: center;
     }
     .burger:hover{
         cursor: pointer;
@@ -306,13 +301,13 @@ img{
         background-color: white;
         border-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        z-index: 999; /* Ensure the dialog is above other content */
+        z-index: 999; 
     }
     .mobile-nav {
         display: grid;
         grid-template-rows: repeat(4, auto);
         justify-content: center;
-        align-content: flex-start; /* Align items to the top */
+        align-content: flex-start; 
         height: 100%;
     }
     .popup-item {
