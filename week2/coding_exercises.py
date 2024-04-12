@@ -11,7 +11,7 @@ def find_and_print(messages, current_station):
                 'Qizhang', 'Xindian City Hall', 'Xindian']
     stations3 = ['Xiaobitan', 'Qizhang', 'Xindian City Hall', 'Xindian']
 
-    node_judge = line2 + ['Xiaobitan']
+    node_judge = stations2 + ['Xiaobitan']
     new_messages = {}
     for k, v in messages.items():
         for n in node_judge:
@@ -21,12 +21,12 @@ def find_and_print(messages, current_station):
     
     def distance(station1, station2):
         if station1 != 'Xiaobitan' and 'station2' != 'Xiaobitan':
-            return abs(line2.index(station1) - line2.index(station2))
+            return abs(stations2.index(station1) - stations2.index(station2))
         else:
             try:
-                return abs(line1.index(station1) - line1.index(station2))
+                return abs(stations1.index(station1) - stations1.index(station2))
             except:
-                return abs(line3.index(station1) - line3.index(station2))
+                return abs(stations3.index(station1) - stations3.index(station2))
     
     candidate = ''
     d = 0
