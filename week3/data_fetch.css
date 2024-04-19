@@ -127,7 +127,8 @@ img{
     .overlayT {
         position: absolute;
         bottom: 0;
-        left: 0;
+        padding-left: 5px;
+        box-sizing: border-box;
         width: 100%; /* Ensure full width */
         height: 35px;
         display: block;
@@ -137,6 +138,7 @@ img{
         text-align: center;
 
         /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Fill_a_box_with_an_image */
+        
         white-space: nowrap; 
         overflow: hidden;
         text-overflow: ellipsis;
@@ -239,7 +241,8 @@ img{
     .overlayT {
         position: absolute;
         bottom: 0;
-        left: 0;
+        padding-left: 5px;
+        box-sizing: border-box;
         width: 100%; /* Ensure full width */
         height: 35px;
         display: block;
@@ -330,7 +333,8 @@ img{
     .overlayT {
         position: absolute;
         bottom: 0;
-        left: 0;
+        padding-left: 5px;
+        box-sizing: border-box;
         width: 100%; /* Ensure full width */
         height: 35px;
         display: block;
