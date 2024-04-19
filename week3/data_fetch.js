@@ -115,8 +115,8 @@ fetch(data_url)
             return [{'stitle':stitles.slice(13+10*index, 23+10*index),
                     'img':imgs.slice(13+10*index, 23+10*index)}, 10]
         }else{
-            return [{'stitle':stitles.slice(13+10*index, dataLength),
-                    'img':imgs.slice(13+10*index, dataLength)}, dataLength - (13+10*index)]
+            return [{'stitle':stitles.slice(13+10*index, dataLength + 1),
+                    'img':imgs.slice(13+10*index, dataLength + 1)}, dataLength - (13+10*index) + 1]
         };
         
     };
