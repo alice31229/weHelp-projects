@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="../static/simple_member_system.css">
+    <script src="../static/homePage.js"></script>
+</head>
+<body>
+    <div class="welcome">歡迎光臨，請輸入帳號密碼</div>
+    <div class="titleSection">登入系統</div>
+    
+    <form action="/signin" id="signin" method="post">
+        <label for="username">帳號</label>
+        <input type="text" id="usernameID" name="username" value="">
+        <br>
+        <label for="passward">密碼</label>
+        <input type="text" id="passwordID" name="password" value="">
+        <br>
+        <label for="agree">同意條款</label>
+        <input type="checkbox" id="agreeID" name="agree" value="">
+        <br>
+        <button type="submit" class="logInBtn">登入</button>
+    </form>
+
+
+    <hr>
+
+
+    <div class="titleSection">計算正整數的平方</div>
+
+    <form action="/square" id="square" method="post">
+        <label for="integer">正整數</label>
+        <input type="text" id="integerID" name="integer" value="">
+        <br>
+        <button type="submit" class="calculateBtn">計算</button>
+    </form>
+</body>
+</html>
