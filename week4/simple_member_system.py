@@ -75,18 +75,26 @@ def logOut(request: Request):
     return RedirectResponse(url='/')
 
 # 正整數平方
-@app.get("/square/{integer}")
+@app.post("/square/{integer}")
 def print_result(request: Request, integer: str):
     result = int(integer)**2
-    print(result)
     return templates.TemplateResponse(
         request=request, name="calculateSquare.html", context={"result": result}
     )
 
-@app.post("/square")
-def recieve_num(integer: str = Form(None)):
-    redirect_url = f"/square/{integer}"
-    return RedirectResponse(redirect_url, status_code=303, headers={"integer": integer})
+# 後端再轉一次
+# @app.get("/square/{integer}")
+# def print_result(request: Request, integer: str):
+#     result = int(integer)**2
+#     print(result)
+#     return templates.TemplateResponse(
+#         request=request, name="calculateSquare.html", context={"result": result}
+#     )
+
+# @app.post("/square")
+# def recieve_num(integer: str = Form(None)):
+#     redirect_url = f"/square/{integer}"
+#     return RedirectResponse(redirect_url, status_code=303, headers={"integer": integer})
 
 
 if __name__ == '__main__':
