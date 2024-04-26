@@ -82,7 +82,7 @@ def print_result(request: Request, integer: str):
         request=request, name="calculateSquare.html", context={"result": result}
     )
 
-# 後端再轉一次
+# 正整數平方 後端再轉一次
 # @app.get("/square/{integer}")
 # def print_result(request: Request, integer: str):
 #     result = int(integer)**2
