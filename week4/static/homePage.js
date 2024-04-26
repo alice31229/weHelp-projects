@@ -43,6 +43,13 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Please enter a positive number");
             return;
         };
+
+        // Construct the URL dynamically
+        const redirectUrl = `/square/${inputValue}`;
+
+        // Redirect to the calculated URL
+        formGoAhead.setAttribute('action', redirectUrl)
+
         formGoAhead.submit();
         evt.target.submit();
     });
