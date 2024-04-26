@@ -86,7 +86,6 @@ def print_result(request: Request, integer: str):
 # @app.get("/square/{integer}")
 # def print_result(request: Request, integer: str):
 #     result = int(integer)**2
-#     print(result)
 #     return templates.TemplateResponse(
 #         request=request, name="calculateSquare.html", context={"result": result}
 #     )
