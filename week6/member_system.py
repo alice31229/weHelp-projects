@@ -29,15 +29,12 @@ class member_message_deletion(BaseModel):
 mysql_secret_code = os.environ.get('ENV_MYSQL_PASSWORD')
 
 # MySQL settings
-#db = mysql.connector.connect(
 db = mysql.connector.pooling.MySQLConnectionPool(
     pool_name = "sql_pool",
     host="localhost", 
     user="root", 
     password=mysql_secret_code, 
     database="website")
-
-#Cursor = db.cursor()
 
 
 # 首頁
@@ -148,11 +145,6 @@ def logOut(request: Request):
                             "member_id": '-1',
                             "member_name": '',
                             "member_username": ''})
-
-    # delete id, name, username
-    # request.session.pop('member_id')
-    # request.session.pop('member_name')
-    # request.session.pop('member_username')
 
     return RedirectResponse(url='/')
 
