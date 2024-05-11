@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="../static/member_system.css">
+    <script src="../static/homePage.js"></script>
+</head>
+<body>
+    <div class="welcome">歡迎光臨，請註冊登入系統</div>
+    
+    <div class="titleSection">註冊帳號</div>
+    <form action="/signup" id="signup" method="post">
+        <label for="name">姓名</label>
+        <input type="text" id="nameID" name="name" value="">
+        <br>
+        <label for="usernameUp">帳號</label>
+        <input type="text" id="usernameUpID" name="usernameUp" value="">
+        <br>
+        <label for="passwardUp">密碼</label>
+        <input type="text" id="passwordUpID" name="passwordUp" value="">
+        <br>
+        <button type="submit" class="applyBtn">註冊</button>
+    </form>
+
+    <hr>
+
+    <div class="titleSection">登入系統</div>
+    <form action="/signin" id="signin" method="post">
+        <label for="username">帳號</label>
+        <input type="text" id="usernameID" name="username" value="">
+        <br>
+        <label for="passward">密碼</label>
+        <input type="password" id="passwordID" name="password" value="">
+        <br>
+        <button type="submit" class="logInBtn">登入</button>
+    </form>
+
+</body>
+</html>
