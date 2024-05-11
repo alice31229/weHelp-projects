@@ -34,7 +34,7 @@
     {% for message in user_messages %}
     
     <li>
-        <b>{{ message.name }}</b> <span>:</span> {{ message.content }}
+        <b>{{ message.name }}</b> : {{ message.content }}
         {% if message.own_message_judge %}
             <button id="{{ message.id, member_id }}" class="deleteMessageBtn">X</button>
         {% endif %}
