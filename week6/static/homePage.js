@@ -1,7 +1,4 @@
-// not latest -> cmd + shift + R
-// https://stackoverflow.com/questions/50371401/form-data-validation-before-submission
 
-// main part for transit the form value from front-end input and validate it to the fastapi router
 document.addEventListener("DOMContentLoaded", function () {
     let applyBtn = document.querySelector('.applyBtn');
     
