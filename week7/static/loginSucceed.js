@@ -24,19 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
     checkUsernameBtn.onclick = function(event) {
         event.preventDefault();
 
-        //let member_id = this.id;
         let memberUsername = document.querySelector("#checkNameID");
-        // let member_info = {"member_id": member_id,
-        //                    "username": memberUsername};
 
         fetch('http://127.0.0.1:8000/api/member?username='+memberUsername.value)
-        // , {
-        //     method: 'get',
-        //     body: JSON.stringify(member_info),
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     }
-        // })
+
         .then(function (response){
             return response.json();
         })
@@ -64,8 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updateBtn.onclick = function(event) {
         event.preventDefault();
 
-        //let member_id = this.id;
-        //let update_user_name = document.querySelector('#update_member_name');
         let newName = document.querySelector("#updateNameID");
         let member_info = {'name': newName.value};
 
