@@ -59,9 +59,6 @@ def welcome_home(request: Request):
 def respond_match_member(request: Request, username: str):
 
     response_json = {"data": None}
-    # member_id = member_info.member_id
-
-    # if member_id == request.session.get('member_id'):
 
     try:
         query = "SELECT id, name, username FROM member WHERE username = %s;"
@@ -71,7 +68,6 @@ def respond_match_member(request: Request, username: str):
         Cursor = con.cursor(dictionary=True)
         Cursor.execute(query, account)
         fetch_result = Cursor.fetchall()
-        #print(fetch_result)
 
         if fetch_result == []:
 
@@ -83,25 +79,17 @@ def respond_match_member(request: Request, username: str):
     
     except:
 
-        #print('error')
-
         return response_json
 
     finally:
         Cursor.close()
         con.close()
-
-    # else:
-
-    #     return RedirectResponse(url='/')
     
 
 @app.patch("/api/member")
 def update_name(request: Request, member_info: member_name_update):
 
     response_json = {}
-
-    #if member_info.member_id == request.session.get('member_id'):
 
     try:
         update_query = 'UPDATE member SET name = %s WHERE username = %s;'
@@ -112,32 +100,9 @@ def update_name(request: Request, member_info: member_name_update):
         Cursor.execute(update_query, account)
         con.commit()
 
-        # Close the cursor to clear the result set
-        # Cursor.close()
-        # con.close()
-
-        # # Reopen cursor for the next query
-        # con = db.get_connection()
-        # Cursor = con.cursor(dictionary=True)
-
-        # check_query = 'SELECT name FROM member WHERE username = %s;'
-        # username = (request.session.get('username'),)
-        # Cursor.execute(check_query, username)
-        # fetch_result = Cursor.fetch_all()
-
-        # print(fetch_result[0]['name'], member_info.name)
-
-        #if fetch_result[0]['name'] == member_info.name:
-
         response_json['ok'] = True
 
         return response_json
-        
-        # else:
-        #     print('haha')
-        #     response_json['error'] = True
-
-        #     return response_json
 
     except:
 
@@ -149,10 +114,7 @@ def update_name(request: Request, member_info: member_name_update):
         
         Cursor.close()
         con.close()
-
-
-    # else:
-    #     return RedirectResponse(url='/', status_code=303)
+        
 
 # 驗證帳號、密碼 
 @app.post("/signin") 
@@ -372,6 +334,7 @@ def delete_message(request: Request, message_info: member_message_deletion):
     else:
         
         return RedirectResponse(url='/', status_code=303)
+        
 
 
 if __name__ == '__main__':
