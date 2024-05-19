@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginSucceed</title>
+    <link rel="stylesheet" href="../static/member_system.css">
+    <script src="../static/loginSucceed.js"></script>
+</head>
+<body>
+    <div class="welcome">歡迎光臨，這是會員頁</div>
+    <div class="congrat">
+        {{ name }}，歡迎登入系統
+    </div>
+
+    <form action="/signout" method="get" id="logoutForm">
+        <a href="/" id="logoutLink">登出系統</a>
+    </form>
+
+
+    <div class="titleSection">查詢會員姓名</div>
+    <form action="/api/member" id="checkName">
+        <input type="text" id="checkNameID">
+        <button type="submit" class="checkBtn">查詢</button>
+    </form>
+
+    <div class="matchUsername" id="searchNameResult">
+    </div>
+
+    <div class="titleSection">更新我的姓名</div>
+    <form action="/api/member" id="updateName">
+        <input type="text" id="updateNameID" placeholder="輸入新的姓名">
+        <button type="submit" class="updateBtn">更新</button>
+    </form>
+
+    <div class="matchUsername" id="updateNameResult">
+    </div>
+
+    <hr>
+
+    <div class="titleSection">快來留言吧</div>
+    <form action="/createMessage" id="createmessage" method="post">
+        <label for="message">內容</label>
+        <input type="text" id="messageID" name="message" value="">
+        <br>
+        <!-- <button type="submit" onClick="createMessage(this.id)" id="{{ member_id }}" class="createMessageBtn">送出</button> -->
+        <button type="submit" id="{{ member_id }}" class="createMessageBtn">送出</button>
+    </form>
+
+    <hr>
+
+    <!-- jinja2 for loop -> print all the names and corresponding messages -->
+
+    {% for message in user_messages %}
+    
+    <li>
+        <b>{{ message.name }}</b> : {{ message.content }}
+        {% if message.own_message_judge %}
+            <button id="{{ message.id, member_id }}" class="deleteMessageBtn">X</button>
+        {% endif %}
+    </li>
+    
+    {% endfor %}
+
+    
+
+</body>
+</html>
